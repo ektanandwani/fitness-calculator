@@ -1,5 +1,6 @@
 package com.example.calculator;
 
+import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
@@ -24,14 +25,10 @@ public class BmiCalculator {
         return "";
     }
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.println("Enter your height: (in meters)");
-        int setHeight = scanner.nextInt();
-        System.out.println("Enter your weight: (in kilograms)");
-        double setWeight = scanner.nextDouble();
-
-        System.out.println(calculateBmi(setHeight, setWeight));
+    public static String calculate()
+    {
+    	
+    	return "";
     }
+    
 }
