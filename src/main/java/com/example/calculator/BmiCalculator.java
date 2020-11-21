@@ -1,34 +1,39 @@
 package com.example.calculator;
 
-import java.io.IOException;
-import java.text.DecimalFormat;
+
 import java.util.Scanner;
 
 public class BmiCalculator {
-    private static String calculateBmi(int height, double weight) {
-        final double countBmi = (weight / Math.pow(height, 2)) * 10000;
-        DecimalFormat df = new DecimalFormat();
-        df.setMaximumFractionDigits(1);
-        df.setMinimumFractionDigits(1);
+    private static double calculateBmi(double height, double weight) {
+    	double bmi;
+    	if(height > 0 && weight > 0)
+    		bmi = weight/height*height;
+    	else
+    		bmi = -1;
 
-        String outputText = "\nYour BMI is: " + df.format(countBmi);
-
-        if (countBmi < 18.5) {
-            return "Underweight" + outputText;
-        } else if (countBmi > 18.5 && countBmi < 24.9) {
-            return "Healthy" + outputText;
-        } else if (countBmi > 25 && countBmi < 30) {
-            return "Overweight" + outputText;
-        } else if (countBmi > 30) {
-            return "Obese" + outputText;
-        }
-        return "";
+        return bmi;
     }
 
     public static String calculate()
     {
+    	Scanner sc = new Scanner(System.in);
+    	System.out.println("Enter your height in meter: ");
+    	double height = sc.nextDouble();
+    	System.out.println("Enter your weight in kg: ");
+    	double weight = sc.nextDouble();
+    	double bmi = calculateBmi(height, weight);
+    	sc.close();
+    	if (bmi > 0 && bmi < 18.5) {
+          return "Underweight. Your BMI is " + bmi;
+	    } else if (bmi > 18.5 && bmi < 24.9) {
+	          return "Healthy. Your BMI is " + bmi;
+	    } else if (bmi > 25 && bmi < 30) {
+	          return "Overweight. Your BMI is " + bmi;
+	    } else if (bmi > 30) {
+	          return "Obese. Your BMI is " + bmi;
+	    }
     	
-    	return "";
+    	return "Invalid Inputs";
     }
     
 }
