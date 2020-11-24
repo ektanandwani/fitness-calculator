@@ -4,7 +4,7 @@ package com.example.calculator;
 import java.util.Scanner;
 
 public class BmiCalculator {
-    private static double calculateBmi(double height, double weight) {
+    public static double calculateBmi(double height, double weight) {
     	double bmi;
     	if(height > 0 && weight > 0)
     		bmi = weight/(height*height);
