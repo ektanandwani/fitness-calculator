@@ -5,12 +5,16 @@ import java.util.Scanner;
 public class Main {
 	
 	public static void main(String[] args) {
-
+		Scanner sc = new Scanner(System.in);
 		int choice = getCalcChoice();
 	    while(choice != 7) {
 	    	switch (choice) {
 			case 1:
-				System.out.println(BmiCalculator.calculate());
+				System.out.println("Enter your height in meter: ");
+				double height = sc.nextDouble();
+				System.out.println("Enter your weight in kg: ");
+				double weight = sc.nextDouble();
+				System.out.println(new BmiCalculator().calculate(height, weight));
 				System.out.println();
 				break;
 			case 2:
