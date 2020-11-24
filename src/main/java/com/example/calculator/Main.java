@@ -11,36 +11,34 @@ public class Main {
 	    	switch (choice) {
 			case 1:
 				System.out.println(BmiCalculator.calculate());
-				choice = getCalcChoice();
+				System.out.println();
 				break;
 			case 2:
 				System.out.println(BmrCalculator.calculate());
-				choice = getCalcChoice();
+				System.out.println();
 				break;
 			case 3:
 				System.out.println(BodyFatCalculator.calculate());
-				choice = getCalcChoice();
+				System.out.println();
 				break;
 			case 4:
 				System.out.println(CalorieCalculator.calculate());
-				choice = getCalcChoice();
+				System.out.println();
 				break;
 			case 5:
 				System.out.println(IdealWeightCalculator.calculate());
-				choice = getCalcChoice();
+				System.out.println();
 				break;
 			case 6:
 				System.out.println(LeanBodyMassCalculator.calculate());
-				choice = getCalcChoice();
-				break;
-			case 7:
-				System.out.println("Bye bye!");
+				System.out.println();
 				break;
 			default:
 				System.out.println("Invalid choice. Please enter a valid option");
-				choice = getCalcChoice();
+				System.out.println();
 				break;
 			}
+	    	choice = getCalcChoice();
 	    	
 	    }
     }
@@ -54,7 +52,7 @@ public class Main {
 		System.out.println("5. Ideal Weight Calculator");
 		System.out.println("6. Lean Body Mass Calculator");
 		System.out.println("7. Exit");
-		System.out.print("Please select the option:  ");
+		System.out.print("Please select the option: ");
 	    Scanner scanner = new Scanner(System.in);
 	    int choice = scanner.nextInt();
 	    return choice;
