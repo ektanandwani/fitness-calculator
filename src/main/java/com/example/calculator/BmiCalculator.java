@@ -4,7 +4,7 @@ package com.example.calculator;
 import java.util.Scanner;
 
 public class BmiCalculator {
-    private static double calculateBmi(double height, double weight) {
+    public double calculateBmi(double height, double weight) {
     	double bmi;
     	if(height > 0 && weight > 0)
     		bmi = weight/(height*height);
@@ -16,7 +16,7 @@ public class BmiCalculator {
 
     public String calculate(double height, double weight)
     {
-    	double bmi = calculateBmi(height, weight);
+    	double bmi = new BmiCalculator().calculateBmi(height, weight);
 //    	sc.close();
     	if (bmi > 0 && bmi < 18.5) {
           return "Underweight. Your BMI is " + bmi;

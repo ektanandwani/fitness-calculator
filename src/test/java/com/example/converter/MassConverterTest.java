@@ -13,6 +13,8 @@ public class MassConverterTest {
     public void kgToGram() {
     	res = massConv.kgToGram(2);
     	assertEquals(2*1000, res, 0.1);
+    	res = massConv.kgToGram(0);
+    	assertEquals(0, res, 0);
     }
 
     @Test
