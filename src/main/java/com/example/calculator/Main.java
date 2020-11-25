@@ -18,7 +18,15 @@ public class Main {
 				System.out.println();
 				break;
 			case 2:
-				System.out.println(BmrCalculator.calculate());
+				System.out.println("Age (15-80): ");
+				int age = sc.nextInt();
+				System.out.println("Gender (M/F): " );
+				char gender = sc.next().charAt(0);
+				System.out.println("Height (cm): ");
+				double h = sc.nextDouble();
+				System.out.println("Weight (kg): ");
+				double w = sc.nextDouble();
+				System.out.println(new BmrCalculator().calculate(age,gender,h,w));
 				System.out.println();
 				break;
 			case 3:
@@ -27,13 +35,13 @@ public class Main {
 				break;
 			case 4:
 			    System.out.println("Age (15-80): ");
-			    int age = sc.nextInt();
+			    age = sc.nextInt();
 			    System.out.println("Gender (M/F): " );
-			    char gender = sc.next().charAt(0);
+			    gender = sc.next().charAt(0);
 			    System.out.println("Height (cm): ");
-			    double h = sc.nextDouble();
+			    h = sc.nextDouble();
 			    System.out.println("Weight (kg): ");
-			    double w = sc.nextDouble();
+			    w = sc.nextDouble();
 			    System.out.println("Activity Level: ");
 			    System.out.println("1. Little to no exercise ");
 			    System.out.println("2. Light exercise (1–3 days per week)");
@@ -46,11 +54,25 @@ public class Main {
 				System.out.println();
 				break;
 			case 5:
-				System.out.println(IdealWeightCalculator.calculate());
+				System.out.println("Age (2-80): ");
+				int age1 = sc.nextInt();
+				System.out.println("Gender (M/F): ");
+				char gender1 = sc.next().charAt(0);
+				System.out.println("Height (in cm): ");
+				double height1 = sc.nextDouble();
+				System.out.println(new IdealWeightCalculator().calculate(age1,gender1,height1));
 				System.out.println();
 				break;
 			case 6:
-				System.out.println(LeanBodyMassCalculator.calculate());
+				System.out.println("Gender (M/F): ");
+				char gender2 = sc.next().charAt(0);
+				System.out.println("Age - 14 or younger? (Y/N): ");
+				char younger = sc.next().charAt(0);
+				System.out.println("Height (in cm): ");
+				double height2 = sc.nextDouble();
+				System.out.println("Weight (in kg): ");
+				double weight2 = sc.nextDouble();
+				System.out.println(new LeanBodyMassCalculator().calculate(younger, gender2, height2, weight2));
 				System.out.println();
 				break;
 			default:

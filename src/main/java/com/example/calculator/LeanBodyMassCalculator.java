@@ -3,7 +3,7 @@ package com.example.calculator;
 import java.util.Scanner;
 
 public class LeanBodyMassCalculator {
-	public static double calcBodyMass(char younger, char gender, double height, double weight) {
+	public double calcBodyMass(char younger, char gender, double height, double weight) {
 		double mass = -1;
 		if(height > 0 && weight > 0) {
 			if(younger == 'N' || younger == 'n') {
@@ -21,16 +21,7 @@ public class LeanBodyMassCalculator {
 		return mass;
 	}
 
-	public static String calculate() {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Gender (M/F): ");
-    	char gender = sc.next().charAt(0);
-    	System.out.println("Age - 14 or younger? (Y/N): ");
-    	char younger = sc.next().charAt(0);
-		System.out.println("Height (in cm): ");
-		double height = sc.nextDouble();
-		System.out.println("Weight (in kg): ");
-		double weight = sc.nextDouble();
+	public String calculate(char younger, char gender, double height, double weight) {
 		double mass = calcBodyMass(younger, gender, height, weight);
     	if(mass > 0 && mass != -1)
     		return "Lean Body Mass" + mass;

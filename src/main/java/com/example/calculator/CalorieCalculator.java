@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class CalorieCalculator {
 	
 	public static String calculate(int age, char gender, double h, double w, int activityLevel) {
-		double bmr = BmrCalculator.calculateBmr(age, gender, h, w);
+		double bmr = (new BmrCalculator()).calculateBmr(age, gender, h, w);
 	    double cal = -1;
 	    if(bmr > 0) {
 	    	if(activityLevel == 1)
