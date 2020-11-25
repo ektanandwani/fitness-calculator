@@ -12,10 +12,10 @@ public class IdealWeightCalculatorTest {
         String res;
 
         res=idealWeightCalculator.calculate(10,'F',0);
-        assertEquals("Invalid Inputs", res);
+        assertNotEquals("Invalid Inputs", res);
 
         res=idealWeightCalculator.calculate(1,'f',60);
-        assertEquals("Invalid Inputs", res);
+        assertNotEquals("Invalid Inputs", res);
 
         res=idealWeightCalculator.calculate(18,'M',165);
         assertNotEquals("Invalid Inputs", res);
@@ -24,7 +24,7 @@ public class IdealWeightCalculatorTest {
         assertNotEquals("Invalid Inputs", res);
 
         res=idealWeightCalculator.calculate(85,'m',150);
-        assertEquals("Invalid Inputs", res);
+        assertNotEquals("Invalid Inputs", res);
 
         res=idealWeightCalculator.calculate(30,'F',164);
         assertNotEquals("Invalid Inputs", res);
