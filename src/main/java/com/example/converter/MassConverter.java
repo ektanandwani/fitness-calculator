@@ -7,7 +7,7 @@ public class MassConverter {
 	}
 	
 	public double kgToPound(double kg) {
-		return kg*1000;
+		return kg*2.204;
 	}
 	
 	public double gramToKg(double gram) {
@@ -23,6 +23,6 @@ public class MassConverter {
 	}
 	
 	public double poundToKg(double pound) {
-		return pound*0.453592000004704;
+		return pound*0.453592;
 	}
 }
