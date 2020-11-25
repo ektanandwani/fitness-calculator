@@ -30,8 +30,22 @@ public class Main {
 				System.out.println();
 				break;
 			case 3:
-//				System.out.println(BodyFatCalculator.calculate());
-//				System.out.println();
+			    System.out.println("Gender (M/F): " );
+			    gender = sc.next().charAt(0);
+				System.out.println("Age (15-80): ");
+			    age = sc.nextInt();
+			    System.out.println("Height (cm): ");
+			    h = sc.nextDouble();
+			    System.out.println("Weight (kg): ");
+			    w = sc.nextDouble();
+			    System.out.println("Neck (cm): ");
+			    double neck = sc.nextDouble();
+			    System.out.println("Waist (cm): ");
+			    double waist = sc.nextDouble();
+			    System.out.println("Hip (cm): ");
+			    double hip = sc.nextDouble();
+			    System.out.println(new BodyFatCalculator().calculate(gender, w, h, neck, waist, hip));
+				System.out.println();
 				break;
 			case 4:
 			    System.out.println("Age (15-80): ");
@@ -50,7 +64,7 @@ public class Main {
 			    System.out.println("5. Very heavy exercise (twice per day, extra heavy workouts)");
 			    System.out.print("Enter your choice: ");
 			    int activity = sc.nextInt();
-				System.out.println(CalorieCalculator.calculate(age, gender, h, w, activity));
+				System.out.println(new CalorieCalculator().calculate(age, gender, h, w, activity));
 				System.out.println();
 				break;
 			case 5:

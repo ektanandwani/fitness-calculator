@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class CalorieCalculator {
 	
-	public static String calculate(int age, char gender, double h, double w, int activityLevel) {
+	public String calculate(int age, char gender, double h, double w, int activityLevel) {
 		double bmr = (new BmrCalculator()).calculateBmr(age, gender, h, w);
 	    double cal = -1;
 	    if(bmr > 0) {
@@ -22,6 +22,6 @@ public class CalorieCalculator {
 	    
 	    if(cal > 0 && cal != -1)
 	    	return "Number of calories to consume everyday: " + cal;
-    	return "Invalid inputs";
+    	return "Invalid Inputs";
 	}
 }
