@@ -24,6 +24,6 @@ public class HeightConverter {
 	}
 	
 	public static double footToMeter(double foot) {
-		return foot*0.3048000097536;
+		return foot*0.3048000;
 	}
 }
