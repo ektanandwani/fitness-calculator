@@ -26,7 +26,23 @@ public class Main {
 //				System.out.println();
 				break;
 			case 4:
-				System.out.println(CalorieCalculator.calculate());
+			    System.out.println("Age (15-80): ");
+			    int age = sc.nextInt();
+			    System.out.println("Gender (M/F): " );
+			    char gender = sc.next().charAt(0);
+			    System.out.println("Height (cm): ");
+			    double h = sc.nextDouble();
+			    System.out.println("Weight (kg): ");
+			    double w = sc.nextDouble();
+			    System.out.println("Activity Level: ");
+			    System.out.println("1. Little to no exercise ");
+			    System.out.println("2. Light exercise (1–3 days per week)");
+			    System.out.println("3. Moderate exercise (3–5 days per week)");
+			    System.out.println("4. Heavy exercise (6–7 days per week)");
+			    System.out.println("5. Very heavy exercise (twice per day, extra heavy workouts)");
+			    System.out.print("Enter your choice: ");
+			    int activity = sc.nextInt();
+				System.out.println(CalorieCalculator.calculate(age, gender, h, w, activity));
 				System.out.println();
 				break;
 			case 5:
