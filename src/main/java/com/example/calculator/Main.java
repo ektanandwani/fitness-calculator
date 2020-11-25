@@ -22,8 +22,8 @@ public class Main {
 				System.out.println();
 				break;
 			case 3:
-				System.out.println(BodyFatCalculator.calculate());
-				System.out.println();
+//				System.out.println(BodyFatCalculator.calculate());
+//				System.out.println();
 				break;
 			case 4:
 				System.out.println(CalorieCalculator.calculate());
